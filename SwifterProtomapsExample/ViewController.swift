@@ -45,7 +45,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         let wk_conf = WKWebViewConfiguration()
         
-        var index_url = www_url.appendingPathComponent("index.html")
+        let index_url = www_url.appendingPathComponent("index.html")
         let str_url = "file://" + index_url.absoluteString
         
         guard let file_url = URL(string:str_url) else {
