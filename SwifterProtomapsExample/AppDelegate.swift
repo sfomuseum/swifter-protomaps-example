@@ -12,7 +12,7 @@ import SwifterProtomaps
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private var server: HttpServer?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let root_url = www_url.appendingPathComponent("pmtiles")
                         
-            let port: in_port_t  = 9001
+            let port: in_port_t = 9001
             let server = HttpServer()
                             
                 var opts = ServeProtomapsOptions(root: root_url)
@@ -34,16 +34,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 server["/pmtiles/:path"] = ServeProtomapsTiles(opts)
                 
                 server["/"] = { request in
-                    return HttpResponse.ok(.text("HELLO WORLD"))
+                    return HttpResponse.ok(.text("Hello world.))
                 }
             
                 try server.start(port)
                 print("Listening for requests on :\(port)")
+            
+                // See this? It's important. Without this then `server` will
+                // go out of scope at the end of this method causing the server
+                // to stop handling requests. Let's just say it took me a long
+                // time (and a lot of cycles reading and re-reading the Apple
+                // AppTransportSecurity docs) to figure this out...
+            
+                self.server = server
                 
         } catch {
             print("Failed to start PM tiles server, \(error)")
             return false
         }
+        
         return true
     }
 
