@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 server["/pmtiles/:path"] = ServeProtomapsTiles(opts)
                 
                 server["/"] = { request in
-                    return HttpResponse.ok(.text("Hello world.))
+                    return HttpResponse.ok(.text("Hello world."))
                 }
             
                 try server.start(port)
