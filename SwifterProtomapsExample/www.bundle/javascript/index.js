@@ -1,6 +1,16 @@
+var xhr = new XMLHttpRequest();
+xhr.open('HEAD', "http://localhost:9001/");
+xhr.onreadystatechange = function() {
+    if (this.readyState == this.DONE) {
+        console.log("HELLO WORLD", this.status);
+    }
+};
+
+xhr.send();
+
 const map = L.map('map');
 
-const p = new protomaps.PMTiles("http://localhost:9000/pmtiles/sfo.pmtiles");
+const p = new protomaps.PMTiles("http://localhost:9001/pmtiles/sfo.pmtiles");
 
 p.metadata().then(m => {
     let bounds_str = m.bounds.split(',');

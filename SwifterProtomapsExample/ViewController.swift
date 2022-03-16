@@ -7,8 +7,6 @@
 
 import UIKit
 import WebKit
-import Swifter
-import SwifterProtomaps
 
 class ViewController: UIViewController, WKNavigationDelegate {
 
@@ -18,28 +16,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         super.viewDidLoad()
         
-        guard let www_url = URL(string: Bundle.main.resourcePath! + "/www.bundle/") else {
-            return
-        }
+        // swifter server and swifter-protomaps handler are configured in AppDelegate.swift
         
-        do {
-            
-            let root_url = www_url.appendingPathComponent("pmtiles")
-                        
-            let port: in_port_t  = 9000
-            let server = HttpServer()
-                            
-                var opts = ServeProtomapsOptions(root: root_url)
-                opts.AllowOrigins = "*"
-                opts.AllowHeaders = "*"
-                
-                server["/pmtiles/:path"] = ServeProtomapsTiles(opts)
-                
-                try server.start(port)
-                print("OKAY")
-                
-        } catch {
-            print("Failed to start PM tiles server \(error)")
+        guard let www_url = URL(string: Bundle.main.resourcePath! + "/www.bundle/") else {
             return
         }
         
@@ -54,8 +33,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         let request = URLRequest(url: file_url)
 
-        // https://stackoverflow.com/questions/25553711/disable-magnification-gesture-in-wkwebview
-        
         webView = WKWebView(frame: .zero, configuration: wk_conf)
         webView.navigationDelegate = self
         view = webView
