@@ -8,6 +8,14 @@ It bundles a [Protomaps](https://github.com/protomaps/) tile database for the Sa
 
 ![](docs/images/swifter-protomaps-example-catalyst.png)
 
+## How does it work?
+
+The [httpswifter/swifter](https://github.com/httpswift/swifter) HTTP server, and handlers for serving Protomaps tiles, is started in the applications `AppDelegate` code.
+
+The web application is instantiated in the application's main `ViewController` code.
+
+The web application itself is contain in the application's `www.bundle` package and makes requests for tiles to the local HTTP server.
+
 ## See also
 
 * https://github.com/sfomuseum/swifter-protomaps
