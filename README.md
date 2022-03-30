@@ -8,6 +8,8 @@ It bundles a [Protomaps](https://github.com/protomaps/) tile database for the Sa
 
 ![](docs/images/swifter-protomaps-example-catalyst.png)
 
+For a longer version detailing why we did this please see the [Serving map tiles to yourself using Protomaps and iOS](https://millsfield.sfomuseum.org/blog/2022/03/30/swifter-protomaps/) blog post.
+
 ## How does it work?
 
 The [httpswifter/swifter](https://github.com/httpswift/swifter) HTTP server, and handlers for serving Protomaps tiles, is started in the applications `AppDelegate` code.
