@@ -13,8 +13,8 @@
 		4A0EF50327E1508300B4A253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EF50127E1508300B4A253 /* Main.storyboard */; };
 		4A0EF50527E1508600B4A253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EF50427E1508600B4A253 /* Assets.xcassets */; };
 		4A0EF50827E1508600B4A253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EF50627E1508600B4A253 /* LaunchScreen.storyboard */; };
-		4A0EF51227E150C500B4A253 /* SwifterProtomaps in Frameworks */ = {isa = PBXBuildFile; productRef = 4A0EF51127E150C500B4A253 /* SwifterProtomaps */; };
 		4A0EF51427E150DD00B4A253 /* www.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EF51327E150DD00B4A253 /* www.bundle */; };
+		4A1B27E12D232CA4002F5790 /* SwifterProtomaps in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1B27E02D232CA4002F5790 /* SwifterProtomaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A0EF51227E150C500B4A253 /* SwifterProtomaps in Frameworks */,
+				4A1B27E12D232CA4002F5790 /* SwifterProtomaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			);
 			name = SwifterProtomapsExample;
 			packageProductDependencies = (
-				4A0EF51127E150C500B4A253 /* SwifterProtomaps */,
+				4A1B27E02D232CA4002F5790 /* SwifterProtomaps */,
 			);
 			productName = SwifterProtomapsExample;
 			productReference = 4A0EF4F827E1508300B4A253 /* SwifterProtomapsExample.app */;
@@ -122,8 +122,8 @@
 			);
 			mainGroup = 4A0EF4EF27E1508300B4A253;
 			packageReferences = (
-				4A0EF50F27E150B500B4A253 /* XCRemoteSwiftPackageReference "swifter" */,
-				4A0EF51027E150C500B4A253 /* XCRemoteSwiftPackageReference "swifter-protomaps" */,
+				4A1B27DF2D232CA4002F5790 /* XCRemoteSwiftPackageReference "swifter-protomaps" */,
+				4A1B27E22D232CDE002F5790 /* XCRemoteSwiftPackageReference "swifter" */,
 			);
 			productRefGroup = 4A0EF4F927E1508300B4A253 /* Products */;
 			projectDirPath = "";
@@ -301,6 +301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SwifterProtomapsExample/SwifterProtomapsExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5J42RJDZY;
@@ -311,7 +312,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +320,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.sfomuseum.SwifterProtomapsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -333,6 +335,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SwifterProtomapsExample/SwifterProtomapsExample.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X5J42RJDZY;
@@ -343,7 +346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,6 +354,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.sfomuseum.SwifterProtomapsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -383,17 +387,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4A0EF50F27E150B500B4A253 /* XCRemoteSwiftPackageReference "swifter" */ = {
+		4A1B27DF2D232CA4002F5790 /* XCRemoteSwiftPackageReference "swifter-protomaps" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/httpswift/swifter";
+			repositoryURL = "https://github.com/sfomuseum/swifter-protomaps";
 			requirement = {
-				branch = stable;
+				branch = main;
 				kind = branch;
 			};
 		};
-		4A0EF51027E150C500B4A253 /* XCRemoteSwiftPackageReference "swifter-protomaps" */ = {
+		4A1B27E22D232CDE002F5790 /* XCRemoteSwiftPackageReference "swifter" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sfomuseum/swifter-protomaps";
+			repositoryURL = "https://github.com/sfomuseum/swifter.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -402,9 +406,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4A0EF51127E150C500B4A253 /* SwifterProtomaps */ = {
+		4A1B27E02D232CA4002F5790 /* SwifterProtomaps */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A0EF51027E150C500B4A253 /* XCRemoteSwiftPackageReference "swifter-protomaps" */;
+			package = 4A1B27DF2D232CA4002F5790 /* XCRemoteSwiftPackageReference "swifter-protomaps" */;
 			productName = SwifterProtomaps;
 		};
 /* End XCSwiftPackageProductDependency section */

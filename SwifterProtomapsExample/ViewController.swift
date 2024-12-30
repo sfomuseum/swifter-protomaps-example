@@ -35,6 +35,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
         webView = WKWebView(frame: .zero, configuration: wk_conf)
         webView.navigationDelegate = self
+        webView.isInspectable = true
+        
         view = webView
         
         webView.load(request)
