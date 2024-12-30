@@ -10,12 +10,11 @@ xhr.send();
 
 const map = L.map('map');
 
-const p = new protomaps.PMTiles("http://localhost:9001/pmtiles/sfo.pmtiles");
+const tile_url = "http://localhost:9001/pmtiles/sfo.pmtiles";
+const tile_theme = "white";
+const tile_bounds = [ [37.601617, -122.408061], [37.640167, -122.354907] ];
 
-p.metadata().then(m => {
-    let bounds_str = m.bounds.split(',');
-    let bounds = [[+bounds_str[1],+bounds_str[0]],[+bounds_str[3],+bounds_str[2]]];
-    layer = new protomaps.LeafletLayer({attribution:'<a href="https://protomaps.com">Protomaps</a> © <a href="https://openstreetmap.org/copyright">OpenStreetMap</a>',url:p,bounds:bounds})
-    layer.addTo(map);
-    map.fitBounds(bounds);
-})
+const tile_layer = protomapsL.leafletLayer({url: tile_url, theme: tile_theme});
+
+tile_layer.addTo(map);
+map.fitBounds(bounds);
