@@ -14,7 +14,7 @@
 		4A0EF50527E1508600B4A253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EF50427E1508600B4A253 /* Assets.xcassets */; };
 		4A0EF50827E1508600B4A253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EF50627E1508600B4A253 /* LaunchScreen.storyboard */; };
 		4A0EF51427E150DD00B4A253 /* www.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A0EF51327E150DD00B4A253 /* www.bundle */; };
-		4A1B27E12D232CA4002F5790 /* SwifterProtomaps in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1B27E02D232CA4002F5790 /* SwifterProtomaps */; };
+		4A844BA72D28CD4300FE2E9E /* SwifterProtomaps in Frameworks */ = {isa = PBXBuildFile; productRef = 4A844BA62D28CD4300FE2E9E /* SwifterProtomaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1B27E12D232CA4002F5790 /* SwifterProtomaps in Frameworks */,
+				4A844BA72D28CD4300FE2E9E /* SwifterProtomaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			);
 			name = SwifterProtomapsExample;
 			packageProductDependencies = (
-				4A1B27E02D232CA4002F5790 /* SwifterProtomaps */,
+				4A844BA62D28CD4300FE2E9E /* SwifterProtomaps */,
 			);
 			productName = SwifterProtomapsExample;
 			productReference = 4A0EF4F827E1508300B4A253 /* SwifterProtomapsExample.app */;
@@ -122,8 +122,8 @@
 			);
 			mainGroup = 4A0EF4EF27E1508300B4A253;
 			packageReferences = (
-				4A1B27DF2D232CA4002F5790 /* XCRemoteSwiftPackageReference "swifter-protomaps" */,
 				4A1B27E22D232CDE002F5790 /* XCRemoteSwiftPackageReference "swifter" */,
+				4A844BA52D28CD4300FE2E9E /* XCRemoteSwiftPackageReference "swifter-protomaps" */,
 			);
 			productRefGroup = 4A0EF4F927E1508300B4A253 /* Products */;
 			projectDirPath = "";
@@ -387,14 +387,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4A1B27DF2D232CA4002F5790 /* XCRemoteSwiftPackageReference "swifter-protomaps" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sfomuseum/swifter-protomaps";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		4A1B27E22D232CDE002F5790 /* XCRemoteSwiftPackageReference "swifter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sfomuseum/swifter.git";
@@ -403,12 +395,20 @@
 				kind = branch;
 			};
 		};
+		4A844BA52D28CD4300FE2E9E /* XCRemoteSwiftPackageReference "swifter-protomaps" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sfomuseum/swifter-protomaps";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4A1B27E02D232CA4002F5790 /* SwifterProtomaps */ = {
+		4A844BA62D28CD4300FE2E9E /* SwifterProtomaps */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4A1B27DF2D232CA4002F5790 /* XCRemoteSwiftPackageReference "swifter-protomaps" */;
+			package = 4A844BA52D28CD4300FE2E9E /* XCRemoteSwiftPackageReference "swifter-protomaps" */;
 			productName = SwifterProtomaps;
 		};
 /* End XCSwiftPackageProductDependency section */
